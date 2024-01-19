@@ -12,8 +12,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        if AHReachability.shared.isNetworkAvailable {
+            debugPrint("Network is available!")
+        } else {
+            debugPrint("Network is not available!")
+        }
     }
-
-
 }
-
